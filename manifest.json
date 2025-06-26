@@ -4,15 +4,12 @@
   "version": "1.0",
   "description": "Analyzes links in real-time to detect phishing, redirects, and privacy threats.",
   "permissions": [
-  "storage",
-  "activeTab",
-  "scripting",
-  "runtime"
-],
-
-  "host_permissions": [
-    "<all_urls>"
+    "storage",
+    "activeTab",
+    "scripting",
+    "runtime"
   ],
+  "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
   },
@@ -24,9 +21,11 @@
     }
   ],
   "action": {
-  "default_title": "Link Checker",
-  "default_popup": "popup.html"
-},
-"options_page": "options.html"
-
+    "default_title": "Link Checker",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "icons": {
+    "128": "icon128.png"
+  }
 }
