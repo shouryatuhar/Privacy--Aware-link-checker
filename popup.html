@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Privacy-Aware Link Checker</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="popup-card">
+    <div class="popup-header">
+      <img src="icon128.png" alt="Extension Icon" class="popup-icon" />
+      <span class="popup-title">Privacy-Aware Link Checker</span>
+    </div>
+    <h3 class="section-title">Feature Toggles</h3>
+    <div class="toggle-group">
+      <label class="switch-label"><input type="checkbox" id="toggleVT" class="switch-input" /><span class="switch-slider"></span> VirusTotal Check</label>
+      <label class="switch-label"><input type="checkbox" id="toggleRedirects" class="switch-input" /><span class="switch-slider"></span> Redirect Tracing</label>
+      <label class="switch-label"><input type="checkbox" id="toggleTypos" class="switch-input" /><span class="switch-slider"></span> Typosquatting Detection</label>
+      <label class="switch-label"><input type="checkbox" id="toggleBlacklist" class="switch-input" /><span class="switch-slider"></span> Custom Blacklist</label>
+    </div>
+    <textarea id="blacklistInput" rows="4" placeholder="Enter comma-separated domains..."></textarea>
+    <div id="feedback" class="feedback"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>

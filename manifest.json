@@ -1,0 +1,32 @@
+{
+  "manifest_version": 3,
+  "name": "Privacy-Aware Link Checker",
+  "version": "1.0",
+  "description": "Analyzes links in real-time to detect phishing, redirects, and privacy threats.",
+  "permissions": [
+  "storage",
+  "activeTab",
+  "scripting",
+  "runtime"
+],
+
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+  "default_title": "Link Checker",
+  "default_popup": "popup.html"
+},
+"options_page": "options.html"
+
+}
